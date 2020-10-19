@@ -14,6 +14,7 @@ public class LoginStepDefinitions {
 
     WebDriver driver;
 
+    //This is Sales manager login:
     @Given("user is on the landing page")
     public void user_is_on_the_landing_page(){
         WebDriverManager.chromedriver().setup();
@@ -36,5 +37,27 @@ public class LoginStepDefinitions {
        driver.quit();
     }
 
+    //Self practice. This is for the driver dashboard:
+    @Given("driver is on the landing page")
+    public void driver_is_on_the_landing_page() throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.get("http://qa2.vytrack.com");
+    }
+
+    @When("driver logs in")
+    public void driver_logs_in() throws InterruptedException {
+        driver.findElement(By.id("prependedInput")).sendKeys("user170");
+        driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" + Keys.ENTER);
+        Thread.sleep(1500);
+    }
+
+    @Then("driver should see dashboard")
+    public void driver_should_see_dashboard() {
+        String expected = "Fleet Management";
+        String actual = driver.findElement(By.linkText("Fleet Management")).getText().trim();
+        Assert.assertEquals("Driver is not on dashboard", expected, actual);
+        driver.quit();
+    }
 
 }
