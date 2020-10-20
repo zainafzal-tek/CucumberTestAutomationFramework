@@ -6,8 +6,12 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        //path from content root:
         features = "src\\test\\resources\\features\\Library.login.feature",
+
+        //path from source root:
         glue = "com\\Library\\step_definitions",
+
         dryRun = false
 )
 
