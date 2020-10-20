@@ -29,7 +29,7 @@ public class LoginStepDefinitions {
         String password = ConfigurationReader.getProperty("studentPassword");
 
         //Getting login page object:
-        LibraryLoginPage libraryLoginPage = new LibraryLoginPage();
+        libraryLoginPage = new LibraryLoginPage();
 
         libraryLoginPage.login(email, password);
 
@@ -61,7 +61,7 @@ public class LoginStepDefinitions {
         String librarianPassword = ConfigurationReader.getProperty("librarianPassword");
 
         //Re-instancing login page object to avoid any conflicts:
-        LibraryLoginPage libraryLoginPage = new LibraryLoginPage();
+        libraryLoginPage = new LibraryLoginPage();
 
         libraryLoginPage.login(librarianEmail, librarianPassword);
 
