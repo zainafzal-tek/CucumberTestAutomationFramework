@@ -9,6 +9,8 @@ import org.junit.runner.RunWith;
         features = "src\\test\\resources",
         glue = "com\\vytrack\\step_definitions",
         dryRun = false,
+
+        //This is used to determine which testa we cucumber would only run
         tags = "@parametrized_test"
 )
 public class CucumberRunner {
