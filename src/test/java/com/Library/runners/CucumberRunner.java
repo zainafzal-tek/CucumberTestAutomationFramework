@@ -6,15 +6,17 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+
+        //TODO Change path according to System OS
         //path from content root:
-        features = "src\\test\\resources\\features\\Library.login.feature",
+        features = "src/test/resources/Library_features",
 
         //path from source root:
-        glue = "com\\Library\\step_definitions",
+        glue = "com/Library/step_definitions",
 
         dryRun = false
 )
 
 
-public class LoginRunner {
+public class CucumberRunner {
 }

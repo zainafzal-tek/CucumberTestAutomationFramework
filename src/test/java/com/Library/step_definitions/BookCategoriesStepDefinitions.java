@@ -72,6 +72,8 @@ public class BookCategoriesStepDefinitions {
         WebElement actionsAndAdventure = Driver.getDriver().findElement(By.xpath("(//td[.='Action and Adventure'])[1]"));
         Assert.assertTrue("Actions and advent",actionsAndAdventure.isDisplayed());
 
+        Driver.closeDriver();
+
     }
 
 
