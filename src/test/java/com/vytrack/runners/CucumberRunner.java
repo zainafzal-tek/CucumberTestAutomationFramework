@@ -6,9 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",
-        glue = "com/vytrack/step_definitions",
-        dryRun = false
+        features = "src\\test\\resources",
+        glue = "com\\vytrack\\step_definitions",
+        dryRun = false,
+        tags = "@parametrized_test"
 )
 public class CucumberRunner {
 }
