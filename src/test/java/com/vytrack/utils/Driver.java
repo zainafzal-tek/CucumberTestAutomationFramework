@@ -43,6 +43,8 @@ public class Driver {
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
 
+                default:
+                    throw new RuntimeException("No such Browser yet@");
             }
 
         }
