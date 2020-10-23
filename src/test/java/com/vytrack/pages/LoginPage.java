@@ -15,6 +15,13 @@ public class LoginPage extends BasePage {
     @FindBy(id = "prependedInput2")
     private WebElement password;
 
+    @FindBy(css = "[class='alert alert-error']")
+    private WebElement warningMessage;
+
+    public String getWarningMessageText(){
+        return warningMessage.getText().trim();
+    }
+
     public void login(String usernameValue, String passwordValue){
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
