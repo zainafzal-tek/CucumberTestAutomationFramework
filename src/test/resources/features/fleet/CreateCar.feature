@@ -1,10 +1,11 @@
 Feature: As user, I want to be able to create new cars
 
+  @add_car
   Scenario: 1. Add some car
     Given user is on the landing page
     And user logs in as a "store manager"
     And user navigates to "Fleet" and "Vehicles"
     And user clicks on create a car button
     When user adds new vehicle information
-    |License Plate|Sdet|
-    |Model Year   |2021|
+      |License Plate|SDET|
+      | Model Year  |2021|
