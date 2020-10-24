@@ -35,7 +35,7 @@ public abstract class BasePage {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 30);
 
         String tabXpath = "//*[contains(text(), '"+ tabName +"') and @class = 'title title-level-1']";
-        String moduleXpath = "\"//*[contains(text(), '"+ moduleName +"') and @class = 'title title-level-2']";
+        String moduleXpath = "//*[contains(text(), '"+ moduleName +"') and @class = 'title title-level-2']";
 
         //wait for presence of element for it to be clickable and then once able to click, click on it:
         WebElement tabElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(tabXpath)));
