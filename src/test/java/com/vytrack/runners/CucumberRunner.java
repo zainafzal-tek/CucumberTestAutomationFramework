@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         publish = true,
 
         //This is used to determine which tests cucumber would only run
-        tags = "@add_car"
+        tags = "@Calender_Events"
 )
 public class CucumberRunner {
 }
