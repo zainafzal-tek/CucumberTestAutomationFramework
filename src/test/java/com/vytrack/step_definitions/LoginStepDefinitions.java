@@ -24,9 +24,9 @@ public class LoginStepDefinitions {
         Thread.sleep(3000);
     }
 
-    @Then("user should see dashboard page")
-    public void user_should_see_dashboard_page() {
-       String expected = "Dashboard";
+    @Then("user should see {string} page")
+    public void user_should_see_dashboard_page(String string) {
+       String expected = string;
        String actual = loginPage.getPageSubTitleText().trim();
 
        Assert.assertEquals("Title is not correct!", expected, actual);
