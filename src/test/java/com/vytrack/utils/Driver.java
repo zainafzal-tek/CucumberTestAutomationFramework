@@ -43,7 +43,7 @@ public class Driver {
                         //ChromeOptions chromeOptions = new ChromeOptions();
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
-                        URL gridUrl = new URL("http://3.94.201.51:4444/wd/hub");
+                        URL gridUrl = new URL("http://18.205.113.72:4444/wd/hub");
                         driver = new RemoteWebDriver(gridUrl, desiredCapabilities);
                     } catch (Exception e){
                         e.printStackTrace();
@@ -56,7 +56,7 @@ public class Driver {
                         //desired capabilities and set browser name line of code
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("firefox");
-                        URL gridUrl = new URL("http://3.94.201.51:4444/wd/hub");
+                        URL gridUrl = new URL("http://18.205.113.72:4444/wd/hub");
                         driver = new RemoteWebDriver(gridUrl, desiredCapabilities);
                     } catch (Exception e){
                         e.printStackTrace();
