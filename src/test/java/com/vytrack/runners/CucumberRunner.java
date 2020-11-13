@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         publish = true,
 
         //This is used to determine which tests cucumber would only run
-        tags = "@negative_login"
+        tags = ""
 )
 public class CucumberRunner {
 }
